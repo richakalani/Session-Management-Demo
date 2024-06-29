@@ -19,8 +19,23 @@ extension UIWindow {
     }
 }
 
+// MARK: Get current window screen
 extension UIScreen {
     static var current: UIScreen? {
         UIWindow.current?.screen
+    }
+}
+
+// MARK: Color extension to use hex colors
+extension Color {
+    init(hex: String) {
+        var cleanHexCode = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        cleanHexCode = cleanHexCode.replacingOccurrences(of: "#", with: "")
+        var rgb: UInt64 = 0
+        Scanner(string: cleanHexCode).scanHexInt64(&rgb)
+        let redValue = Float((rgb >> 16) & 0xFF) / 255.0
+        let greenValue = Float((rgb >> 8) & 0xFF) / 255.0
+        let blueValue = Float(rgb & 0xFF) / 255.0
+        self.init(Resolved(red: redValue, green: greenValue, blue: blueValue))
     }
 }
