@@ -11,22 +11,31 @@ struct SignUpView: View {
     @State var loginText: String = ""
     @State var passwordText: String = ""
     @State var nameText: String = ""
+    @State var namePlaceHolder: String =  ""
+    @State var emailPlaceHolder: String = ""
+    @State var passwordPlaceholder: String = ""
     var body: some View {
         VStack(spacing: 16) {
            Text("Sign up")
                 .foregroundStyle(.white)
                 .bold()
             TextField(text: $nameText) {
-                Text("Your full name")
+                Text(namePlaceHolder)
                     .foregroundStyle(.white.opacity(0.8))
             }
+            .simultaneousGesture(TapGesture().onEnded {
+                     namePlaceHolder = ""
+                   })
             .foregroundStyle(.white.opacity(0.8))
             .padding([.vertical, .horizontal], 10)
             .border(Color.gray)
             TextField(text: $loginText) {
-                Text("Your Email")
+                Text(emailPlaceHolder)
                     .foregroundStyle(.white.opacity(0.8))
             }
+            .simultaneousGesture(TapGesture().onEnded {
+                     emailPlaceHolder = ""
+                   })
             .foregroundStyle(.white.opacity(0.8))
             .padding([.vertical, .horizontal], 10)
             .border(Color.gray)
@@ -45,6 +54,11 @@ struct SignUpView: View {
         .padding()
         .background(Color.black.opacity(0.8))
         .padding(.horizontal, 20)
+        .onAppear {
+            namePlaceHolder = TextConstants.yourFullNamePlaceholder
+            emailPlaceHolder = TextConstants.emailPlaceholder
+            passwordPlaceholder = TextConstants.passwordPlaceholder
+        }
     }
 }
 

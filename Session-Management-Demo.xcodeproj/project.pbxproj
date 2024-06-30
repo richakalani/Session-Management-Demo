@@ -19,6 +19,7 @@
 		5650D1B92C307B7E00F3CFA8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1B82C307B7E00F3CFA8 /* SignUpView.swift */; };
 		5650D1BB2C307C0F00F3CFA8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1BA2C307C0F00F3CFA8 /* LoginView.swift */; };
 		5650D1BD2C30885600F3CFA8 /* PasswordTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1BC2C30885600F3CFA8 /* PasswordTextFieldView.swift */; };
+		5650D1C02C317C9B00F3CFA8 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1BF2C317C9B00F3CFA8 /* TextConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		5650D1B82C307B7E00F3CFA8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5650D1BA2C307C0F00F3CFA8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5650D1BC2C30885600F3CFA8 /* PasswordTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldView.swift; sourceTree = "<group>"; };
+		5650D1BF2C317C9B00F3CFA8 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		563D71222C283237006EA76B /* Session-Management-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5650D1BE2C317C7D00F3CFA8 /* Constants */,
 				5650D1B42C305A0B00F3CFA8 /* Views */,
 				5650D1B12C283D4100F3CFA8 /* Extension */,
 				5650D19F2C28350C00F3CFA8 /* GoogleService-Info.plist */,
@@ -111,6 +114,14 @@
 				5650D1BC2C30885600F3CFA8 /* PasswordTextFieldView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5650D1BE2C317C7D00F3CFA8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5650D1BF2C317C9B00F3CFA8 /* TextConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5650D1C02C317C9B00F3CFA8 /* TextConstants.swift in Sources */,
 				5650D1BB2C307C0F00F3CFA8 /* LoginView.swift in Sources */,
 				563D71262C283237006EA76B /* ContentView.swift in Sources */,
 				5650D1BD2C30885600F3CFA8 /* PasswordTextFieldView.swift in Sources */,

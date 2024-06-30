@@ -15,12 +15,12 @@ struct ContentView: View {
             Spacer()
             HStack {
                 Spacer()
-                Text("Login")
+                Text(TextConstants.login)
                     .font(.title)
                     .bold()
                     .foregroundStyle(Color.white)
                     .padding()
-                Text ("Sign up")
+                Text(TextConstants.signUp)
                     .font(.title)
                     .bold()
                     .foregroundStyle(Color.white)
@@ -34,13 +34,13 @@ struct ContentView: View {
                     LoginView()
                         .opacity(toggleOn ? 1 : 0)
                         .rotation3DEffect(
-                            .degrees(toggleOn ? 0 : -180), axis: (x: 0.0, y: 1.0, z: 0.0)
+                            .degrees(toggleOn ? 0.001 : -180), axis: (x: 0.0, y: 1.0, z: 0.0)
                         )
                         .animation(Animation.easeInOut(duration: 0.7), value: toggleOn)
                     SignUpView()
                         .opacity(toggleOn ? 0 : 1)
                         .rotation3DEffect(
-                            .degrees(toggleOn ? 180 : 0), axis: (x: 0.0, y: 1.0, z: 0.0)
+                            .degrees(toggleOn ? 180 : 0.001), axis: (x: 0.0, y: 1.0, z: 0.0)
                         )
                         .animation(Animation.easeInOut(duration: 0.7), value: toggleOn)
                 }
