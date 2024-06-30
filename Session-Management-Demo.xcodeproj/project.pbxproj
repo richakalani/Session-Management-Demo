@@ -18,6 +18,7 @@
 		5650D1B62C305A2500F3CFA8 /* CustomToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1B52C305A2500F3CFA8 /* CustomToggleView.swift */; };
 		5650D1B92C307B7E00F3CFA8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1B82C307B7E00F3CFA8 /* SignUpView.swift */; };
 		5650D1BB2C307C0F00F3CFA8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1BA2C307C0F00F3CFA8 /* LoginView.swift */; };
+		5650D1BD2C30885600F3CFA8 /* PasswordTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650D1BC2C30885600F3CFA8 /* PasswordTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5650D1B52C305A2500F3CFA8 /* CustomToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggleView.swift; sourceTree = "<group>"; };
 		5650D1B82C307B7E00F3CFA8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5650D1BA2C307C0F00F3CFA8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5650D1BC2C30885600F3CFA8 /* PasswordTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5650D1B52C305A2500F3CFA8 /* CustomToggleView.swift */,
 				5650D1B82C307B7E00F3CFA8 /* SignUpView.swift */,
 				5650D1BA2C307C0F00F3CFA8 /* LoginView.swift */,
+				5650D1BC2C30885600F3CFA8 /* PasswordTextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				5650D1BB2C307C0F00F3CFA8 /* LoginView.swift in Sources */,
 				563D71262C283237006EA76B /* ContentView.swift in Sources */,
+				5650D1BD2C30885600F3CFA8 /* PasswordTextFieldView.swift in Sources */,
 				5650D1B92C307B7E00F3CFA8 /* SignUpView.swift in Sources */,
 				5650D1B62C305A2500F3CFA8 /* CustomToggleView.swift in Sources */,
 				5650D1B32C283D5E00F3CFA8 /* Extensions.swift in Sources */,

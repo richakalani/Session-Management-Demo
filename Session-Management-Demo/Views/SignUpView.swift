@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @State var loginText: String = ""
+    @State var passwordText: String = ""
+    @State var nameText: String = ""
     var body: some View {
         VStack(spacing: 16) {
            Text("Sign up")
                 .foregroundStyle(.white)
                 .bold()
-            TextField(text: .constant("")) {
+            TextField(text: $nameText) {
                 Text("Your full name")
                     .foregroundStyle(.white.opacity(0.8))
             }
+            .foregroundStyle(.white.opacity(0.8))
             .padding([.vertical, .horizontal], 10)
             .border(Color.gray)
-            TextField(text: .constant("")) {
+            TextField(text: $loginText) {
                 Text("Your Email")
                     .foregroundStyle(.white.opacity(0.8))
             }
+            .foregroundStyle(.white.opacity(0.8))
             .padding([.vertical, .horizontal], 10)
             .border(Color.gray)
-            TextField(text: .constant("")) {
-                Text("Your Password")
-                    .foregroundStyle(.white.opacity(0.8))
-            }
-            .padding([.vertical, .horizontal], 10)
-            .border(Color.gray)
+            PasswordTextFieldView()
             Button(action: {}, label: {
                 Text("Sign up")
                     .foregroundStyle(.white)

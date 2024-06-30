@@ -36,13 +36,13 @@ struct ContentView: View {
                         .rotation3DEffect(
                             .degrees(toggleOn ? 0 : -180), axis: (x: 0.0, y: 1.0, z: 0.0)
                         )
-                        .animation(Animation.easeInOut(duration: 0.5), value: toggleOn)
+                        .animation(Animation.easeInOut(duration: 0.7), value: toggleOn)
                     SignUpView()
                         .opacity(toggleOn ? 0 : 1)
                         .rotation3DEffect(
                             .degrees(toggleOn ? 180 : 0), axis: (x: 0.0, y: 1.0, z: 0.0)
                         )
-                        .animation(Animation.easeInOut(duration: 0.5), value: toggleOn)
+                        .animation(Animation.easeInOut(duration: 0.7), value: toggleOn)
                 }
             }.frame(height: 400)
         
