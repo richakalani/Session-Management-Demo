@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var authManager: AuthenticationManager
     @State var loginText: String = ""
     @State var passwordText: String = ""
     @State var emailPlaceHolder: String = ""
@@ -27,7 +28,9 @@ struct LoginView: View {
             .padding([.vertical, .horizontal], 10)
             .border(Color.gray)
             PasswordTextFieldView()
-            Button(action: {}, label: {
+            Button(action: {
+                signAnonymously()
+            }, label: {
                 Text(TextConstants.login)
                     .foregroundStyle(.white)
                     .bold()
@@ -50,6 +53,15 @@ struct LoginView: View {
         .onAppear {
             emailPlaceHolder = TextConstants.emailPlaceholder
             passwordText = TextConstants.passwordPlaceholder
+        }
+    }
+    func signAnonymously() {
+        Task {
+            do {
+                let result = try await authManager.signInAnonymously()
+            } catch {
+                print("Guest Login error \(error.localizedDescription)")
+            }
         }
     }
 }
